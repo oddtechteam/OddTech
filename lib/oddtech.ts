@@ -203,6 +203,9 @@ export const engagement = [
   },
 ];
 
+// Prefixes a public/ file path with the deploy basePath (/OddTech on GitHub Pages).
+export const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 // Real client projects. Screenshots live in public/work/ (captured from the live sites).
 export type WorkItem = {
   client: string;
@@ -220,7 +223,7 @@ export const work: WorkItem[] = [
     client: "Zurrii Luxury",
     industry: "Fashion & E-commerce",
     url: "https://www.zurriiluxury.com/",
-    image: "/work/zurrii.jpg",
+    image: asset("/work/zurrii.jpg"),
     summary: "An online store for exclusive chikankari garments for women, with collections, new arrivals, and a premium shopping experience.",
     services: ["UI/UX Design", "E-commerce Development"],
     quote:
@@ -231,7 +234,7 @@ export const work: WorkItem[] = [
     client: "Nirwana Stays",
     industry: "Hospitality & Travel",
     url: "https://nirwanastays.com/",
-    image: "/work/nirwana.jpg",
+    image: asset("/work/nirwana.jpg"),
     summary: "A lake-view resort in Lonavala offering Pawna Lake camping, glamping, and nature stays, with destinations, offers, and stay listings.",
     services: ["Website Design", "Web Development"],
     quote:
@@ -242,7 +245,7 @@ export const work: WorkItem[] = [
     client: "Sahyadri World School",
     industry: "Education",
     url: "https://www.sahyadriworldschool.com/",
-    image: "/work/sahyadri.jpg",
+    image: asset("/work/sahyadri.jpg"),
     summary: "A school website for Chikhali, Pimpri-Chinchwad, covering holistic education, campus facilities, and admissions for 2026-27.",
     services: ["Website Design", "Web Development"],
     featured: true,
@@ -251,7 +254,7 @@ export const work: WorkItem[] = [
     client: "Lakhe Global",
     industry: "Manufacturing Group",
     url: "https://lakheglobal.com/",
-    image: "/work/lakhe.jpg",
+    image: asset("/work/lakhe.jpg"),
     summary: "The corporate website of the Lakhe Group of Companies, a diversified Pune-based group spanning sixteen businesses.",
     services: ["Website Design", "Web Development"],
   },
@@ -259,8 +262,16 @@ export const work: WorkItem[] = [
     client: "Apurva Samant",
     industry: "Public Figure",
     url: "https://apurvasamant.org/",
-    image: "/work/apurva.jpg",
+    image: asset("/work/apurva.jpg"),
     summary: "The official Marathi-language website of youth leader Apurva Samant, Lanja-Rajapur, covering initiatives, schemes, and grassroots work.",
+    services: ["Website Design", "Web Development"],
+  },
+  {
+    client: "Gaikwad Sardar Wada",
+    industry: "Heritage & Events",
+    url: "https://gaikwadsardarwada.com/",
+    image: asset("/work/gaikwad.jpg"),
+    summary: "A 350+ year old heritage wada near Rajgurunagar, Pune, offering heritage stays, intimate weddings, private celebrations, photoshoots, and traditional Maharashtrian dining.",
     services: ["Website Design", "Web Development"],
   },
 ];
