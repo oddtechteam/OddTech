@@ -203,7 +203,7 @@ export const engagement = [
   },
 ];
 
-// Prefixes a public/ file path with the deploy basePath (/OddTech on GitHub Pages).
+// Prefixes a public/ file path with NEXT_PUBLIC_BASE_PATH if set (empty at the custom-domain root).
 export const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
 
 // Real client projects. Screenshots live in public/work/ (captured from the live sites).
